@@ -7,7 +7,7 @@ function LandingPage() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/posts")
+      .get("https://zupay-assignent-complete.onrender.com/posts")
       .then((response) => setBlogs(response.data))
       .catch((error) => console.error("Error fetching blogs:", error));
   }, []);
@@ -15,7 +15,7 @@ function LandingPage() {
   const handleDelete = (id) => {
     if (window.confirm("Are you sure you want to delete this post?")) {
       axios
-        .delete(`http://localhost:5000/posts/${id}`)
+        .delete(`https://zupay-assignent-complete.onrender.com/posts/${id}`)
         .then(() => {
           setBlogs(blogs.filter((blog) => blog._id !== id));
         })
