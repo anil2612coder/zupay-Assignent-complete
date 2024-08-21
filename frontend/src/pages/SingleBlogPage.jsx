@@ -8,7 +8,7 @@ function SingleBlogPage() {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:5000/posts/${id}`)
+      .get(`https://zupay-assignent-complete.onrender.com/posts/${id}`)
       .then((response) => setBlog(response.data[0]))
       .catch((error) => console.error("Error fetching blog:", error));
   }, [id]);
