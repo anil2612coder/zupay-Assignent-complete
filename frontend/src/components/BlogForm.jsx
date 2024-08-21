@@ -15,7 +15,7 @@ function BlogForm() {
   useEffect(() => {
     if (id) {
       axios
-        .get(`http://localhost:5000/posts/${id}`)
+        .get(`https://zupay-assignent-complete.onrender.com/posts/${id}`)
         .then((response) => setFormData(response.data[0]))
         .catch((error) => console.error("Error fetching blog:", error));
     }
@@ -28,8 +28,8 @@ function BlogForm() {
   const handleSubmit = (e) => {
     e.preventDefault();
     const request = id
-      ? axios.put(`http://localhost:5000/posts/${id}`, formData)
-      : axios.post("http://localhost:5000/posts", formData);
+      ? axios.put(`https://zupay-assignent-complete.onrender.com/posts/${id}`, formData)
+      : axios.post("https://zupay-assignent-complete.onrender.com/posts", formData);
 
     request
       .then(() => navigate("/"))
